@@ -12,14 +12,13 @@
   --night-card-bg: #2a2a2a;
 
   /* Accent Colors */
-  --accent: #5e81ac;  /* soft blue */
-  --warm: #d08770;    /* warm orange */
-  --cool: #88c0d0;    /* cool cyan */
-  --green: #a3be8c;
+  --accent: #5e81ac; 
+
 }
 
 
 /* Base Styles */
+
 body {
   margin: 0;
   font-family: var(--font);

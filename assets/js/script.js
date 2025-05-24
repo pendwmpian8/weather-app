@@ -1,8 +1,8 @@
-// === CONFIGURATION ===
+//CONFIGURATION
 const API_KEY = '7ec2d0652cd848c7b4e181822252405';
 const DEFAULT_LOCATION = 'London';
 
-// === DOM ELEMENTS ===
+//DOM ELEMENTS
 const themeToggle = document.getElementById('themeToggle');
 const unitToggle = document.getElementById('unitToggle');
 const searchForm = document.getElementById('searchForm');
@@ -10,11 +10,11 @@ const cityInput = document.getElementById('cityInput');
 const weatherCard = document.querySelector('.weather-card');
 const body = document.body;
 
-// === STATE ===
+//STATE
 let currentUnit = 'C';
 let currentTempC = null;
 
-// === THEME TOGGLE ===
+//THEME TOGGLE
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('night');
   body.classList.toggle('day');
@@ -30,7 +30,7 @@ themeToggle.addEventListener('click', () => {
 });
 
 
-// === UNIT TOGGLE ===
+//UNIT TOGGLE
 unitToggle.addEventListener('click', () => {
   if (currentTempC === null) return;
   currentUnit = currentUnit === 'C' ? 'F' : 'C';
@@ -49,7 +49,7 @@ function updateTemperatureDisplay() {
   }
 }
 
-// === WEATHER FETCH FUNCTION ===
+//WEATHER FETCH FUNCTION
 async function fetchWeather(city) {
   try {
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`);
@@ -61,7 +61,7 @@ async function fetchWeather(city) {
   }
 }
 
-// === UPDATE UI ===
+//UPDATE UI
 function updateWeatherUI(data) {
   const locationEl = document.querySelector('.location');
   const conditionEl = document.querySelector('.condition');
@@ -73,7 +73,7 @@ function updateWeatherUI(data) {
   updateTemperatureDisplay(); // render temp in correct unit
 }
 
-// === SEARCH FUNCTIONALITY ===
+//SEARCH FUNCTIONALITY
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const city = cityInput.value.trim();
@@ -83,5 +83,5 @@ searchForm.addEventListener('submit', (e) => {
   }
 });
 
-// === INIT ===
+//INIT
 fetchWeather(DEFAULT_LOCATION);
