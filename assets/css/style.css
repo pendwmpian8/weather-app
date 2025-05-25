@@ -1,18 +1,18 @@
 :root {
-  --font: 'Helvetica Neue', sans-serif;
+  --font: 'Ubuntu', sans-serif;
 
   /* Light Theme */
-  --day-bg: #fafafa;
-  --day-text: #202020;
-  --day-card-bg: #ffffff;
+  --day-bg: #d9d2c6;
+  --day-text: #35505f;
+  --day-card-bg: #d9c3b0;
 
   /* Dark Theme */
   --night-bg: #1e1e1e;
-  --night-text: #eaeaea;
-  --night-card-bg: #2a2a2a;
+  --night-text: #d9c3b0;
+  --night-card-bg: #35505f;
 
   /* Accent Colors */
-  --accent: #5e81ac; 
+  --accent: #c73232; 
 
 }
 
