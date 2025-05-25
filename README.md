@@ -48,7 +48,8 @@ A minimalist, responsive weather application that uses WeatherAPI to provide rea
 ## Areas for improvement
 - Possibly add more images to visually represent the kind of weather (e.g. rain, mist)
 - Add more data such as air quality
-
+- New favicon which has more contrast on darkmode browsers
+  
 ## Getting Started
 
 Follow these steps to set up the project locally.
