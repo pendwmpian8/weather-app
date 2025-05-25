@@ -7,7 +7,6 @@ const themeToggle = document.getElementById('themeToggle');
 const unitToggle = document.getElementById('unitToggle');
 const searchForm = document.getElementById('searchForm');
 const cityInput = document.getElementById('cityInput');
-const weatherCard = document.querySelector('.weather-card');
 const body = document.body;
 
 //STATE
