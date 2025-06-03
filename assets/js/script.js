@@ -1,6 +1,6 @@
 //CONFIGURATION
-const API_KEY = '7ec2d0652cd848c7b4e181822252405';
-const DEFAULT_LOCATION = 'London';
+const apiKey = '7ec2d0652cd848c7b4e181822252405';
+const defaultLocation = 'London';
 
 //DOM ELEMENTS
 const themeToggle = document.getElementById('themeToggle');
@@ -51,7 +51,7 @@ function updateTemperatureDisplay() {
 //WEATHER FETCH FUNCTION
 async function fetchWeather(city) {
   try {
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
     const data = await response.json();
     updateWeatherUI(data);
   } catch (error) {
@@ -82,5 +82,5 @@ searchForm.addEventListener('submit', (e) => {
   }
 });
 
-//INIT
-fetchWeather(DEFAULT_LOCATION);
+//initial fetch with default location
+fetchWeather(defaultLocation);
